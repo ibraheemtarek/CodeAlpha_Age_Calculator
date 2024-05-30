@@ -16,44 +16,42 @@ const age_calc = () => {
 
     var months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     
-    console.log(todayD)
-    console.log(todayM)
-    console.log(todayY)
+    // used console.log() for testing
+    // console.log(todayD)
+    // console.log(todayM)
+    // console.log(todayY)
 
     if ( DOBd > todayD ){
         todayD = todayD + months[ todayM - 1];
         todayM = todayM - 1;
     }
-
-    console.log(todayD)
-    console.log(todayM)
-    console.log(todayY)
+    // used console.log() for testing
+    // console.log(todayD)
+    // console.log(todayM)
+    // console.log(todayY)
 
     if ( DOBm > todayM ){
         todayM = todayM + 12;
         todayY = todayY - 1;
     }
-    
-    console.log(todayD)
-    console.log(todayM)
-    console.log(todayY)
+    // used console.log() for testing
+    // console.log(todayD)
+    // console.log(todayM)
+    // console.log(todayY)
     
     let age = todayY - DOBy
     const month = todayM - DOBm;
     const day = todayD - DOBd;
     
-    console.log(age)
-    console.log(month)
-    console.log(day)
+    // used console.log() for testing
+    // console.log(age)
+    // console.log(month)
+    // console.log(day)
 
-    // if (month < 0 || (month === 0 && day < 0)) {
-    //     age--;
-    // }
     if (isNaN(age) || isNaN(month) || isNaN(day) ){
         document.getElementById("result").innerText = `Please enter valid a date`
-        console.log('worked')
+        // console.log('worked')
     } else{
         document.getElementById("result").innerText = `Your age is ${age} years ${month} month ${day} day`
     }
-
 } 
